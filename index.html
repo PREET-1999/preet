@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Name — CS Research</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <!-- Apply theme before paint to prevent flash -->
+  <script>
+    (function () {
+      const t = localStorage.getItem('theme') || 'dark';
+      document.documentElement.dataset.theme = t;
+    })();
+  </script>
+</head>
+
+<body>
+
+  <!-- Nav -->
+  <nav>
+    <div class="nav-inner">
+      <span class="nav-logo">PREET</span>
+      <ul class="nav-links">
+        <li><a href="#about">about</a></li>
+        <li><a href="#projects">projects</a></li>
+        <li><a href="#blog">blog</a></li>
+        <li><a href="#events">events</a></li>
+        <li>
+          <button class="theme-btn" id="themeToggle" aria-label="Toggle theme">
+            <span class="theme-icon" id="themeIcon">☀</span>
+            <span id="themeLabel">light</span>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <div class="container">
+    <header class="hero">
+      <p class="hero-label">Computer Science - Research</p>
+      <h1 class="hero-name">PREET SONI<span class="cursor" aria-hidden="true"></span></h1>
+      <!-- <p class="hero-bio">
+        Masters By Research student at IIT Bombay, 
+        working under the guidance of Prof. Manas Thakur. My research interests lie in the areas of 
+        compilers and programming languages (PL) and my current work 
+        involves churning out performance for Just-In-Time compilers within managed runtimes.
+        In the coming years, I aim to explore advanced compiler optimizations, language design principles, and the integration of new paradigms into existing languages
+      </p> -->
+      <!-- <div class="hero-links">
+        <a class="hero-link" href="mailto:24m2117@iitb.ac.in">↗ email</a>
+        <a class="hero-link" href="https://github.com/PREET-1999" target="_blank">↗ github</a>
+        <!-- <a class="hero-link" href="https://scholar.google.com" target="_blank">↗ scholar</a> -->
+      <!-- <a class="hero-link" href="/cv.pdf" target="_blank">↗ cv</a> -->
+      <!-- </div> -->
+      <div class="hero-links">
+        <!-- mail — Lucide (works fine, not a brand icon) -->
+        <a class="hero-link" href="mailto:24m2117@iitb.ac.in">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect width="20" height="16" x="2" y="4" rx="2" />
+            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+          </svg>
+          email
+        </a>
+        <!-- github — Simple Icons SVG -->
+        <a class="hero-link" href="https://github.com/PREET-1999" target="_blank" rel="noopener">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+          </svg>
+          github
+        </a>
+        <!-- linkedin — Simple Icons SVG -->
+        <a class="hero-link" href="https://www.linkedin.com/in/preet-soni-06a841177/" target="_blank" rel="noopener">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+          </svg>
+          linkedin
+        </a>
+        <!-- scholar — mortar board icon (Lucide) -->
+        <!-- <a class="hero-link" href="https://scholar.google.com" target="_blank" rel="noopener">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+          scholar
+        </a> -->
+        <!-- cv — file icon (Lucide) -->
+        <!-- <a class="hero-link" href="/cv.pdf" target="_blank" rel="noopener">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8m8 4H8m4 4H8"/></svg>
+          cv
+        </a> -->
+      </div>
+    </header>
+  </div>
+
+  <main class="container">
+
+    <!-- About -->
+    <section id="about">
+      <p class="section-label">about</p>
+      <div class="about-text">
+        <p>
+          Masters By Research student at IIT Bombay,
+          working under the guidance of Prof. Manas Thakur<a class="prof-link" href="https://www.cse.iitb.ac.in/~manas/"
+            target="_blank" rel="noopener">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10" />
+              <path
+                d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+            </svg>
+          </a>. My research interests lie in the areas of
+          compilers and programming languages (PL) and my current work
+          involves optimizations for Just-In-Time compilers within managed runtimes.
+          In the coming years, I aim to explore advanced compiler optimizations, language design principles, and the
+          integration of new paradigms into existing languages
+        </p>
+        <!-- <p>
+          Before my Masters, I was working as a software developer at [Previous Institution].
+          Outside of research, I [hobby or other interest — keep it brief and human].
+        </p> -->
+      </div>
+      <div class="tags">
+        <span class="tag">Systems</span>
+        <span class="tag">Virtual Machines</span>
+        <!-- <span class="tag">distributed systems</span> -->
+        <span class="tag">linux</span>
+        <span class="tag">C / C++</span>
+        <span class="tag">programming Paradigms</span>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects">
+      <p class="section-label">projects</p>
+      <div class="project-list">
+
+        <div class="project-item">
+          <div class="project-header">
+            <span class="project-name">Mini-Interpreter</span>
+            <a class="project-link" href="coming-soon.html" aria-label="GitHub">
+              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+              </svg>
+            </a>
+          </div>
+          <p class="project-desc">
+            Built a miniature language runtime in Java with a custom lexer, parser, AST, symbol table, and interpreter.
+            The project explores core compiler and virtual machine concepts through the end-to-end implementation of a
+            language execution pipeline.
+          </p>
+          <div class="tags" style="margin-top: 0.75rem;">
+            <span class="tag">Java</span>
+            <span class="tag">Language-design</span>
+            <span class="tag">Virtual Machines</span>
+          </div>
+        </div>
+
+        <div class="project-item">
+          <div class="project-header">
+            <span class="project-name">Dockerish</span>
+            <a class="project-link" href="coming-soon.html" aria-label="GitHub">
+              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+              </svg>
+            </a>
+          </div>
+          <p class="project-desc">
+            A Docker-like container runtime built from scratch using Linux namespaces, virtual networking, and
+            OverlayFS. Supports image creation, layered filesystems, container lifecycle management, inter-container
+            communication, and host-to-container port forwarding through a custom Dockerfile-inspired interface.
+          </p>
+          <div class="tags" style="margin-top: 0.75rem;">
+            <span class="tag">Linux</span>
+            <span class="tag">Containers</span>
+            <span class="tag">OverlayFS</span>
+          </div>
+        </div>
+
+        <div class="project-item">
+          <div class="project-header">
+            <span class="project-name">Distributed-KeyValue</span>
+            <a class="project-link" href="coming-soon.html" aria-label="GitHub">
+              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+              </svg>
+            </a>
+          </div>
+          <p class="project-desc">
+            Developed a multi-tier key–value store in C featuring a thread-pooled TCP server, in-memory caching layer,
+            and MySQL-backed persistence. Built a configurable load generator and conducted bottleneck analysis to
+            evaluate throughput, latency, and resource utilization under CPU- and I/O-intensive workloads.
+          </p>
+          <div class="tags" style="margin-top: 0.75rem;">
+            <span class="tag">Distributed</span>
+            <span class="tag">C</span>
+            <span class="tag">Multithreading</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Blog -->
+    <section id="blog">
+      <p class="section-label">notes &amp; writing</p>
+      <div class="post-list">
+
+        <div class="post-item">
+          <a class="post-title" href="https://app.notion.com/p/MIPS-2c4c8a178f5b808f9855f600a04bfd54?source=copy_link"
+            target="_blank" rel="noopener">MIPS basics</a>
+          <div class="post-meta">
+            <span class="post-date">Jun 2025</span>
+            <a class="post-notion"
+              href="https://app.notion.com/p/MIPS-2c4c8a178f5b808f9855f600a04bfd54?source=copy_link" target="_blank"
+              rel="noopener" aria-label="Read on Notion">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M4.459 4.208c.746.606 1.026.56 2.428.466l13.215-.793c.28 0 .047-.28-.046-.326L17.86 1.968c-.42-.326-.981-.7-2.055-.607L3.01 2.295c-.466.046-.56.28-.374.466zm.793 3.08v13.904c0 .747.373 1.027 1.214.98l14.523-.84c.841-.046.935-.56.935-1.167V6.354c0-.606-.233-.933-.748-.887l-15.177.887c-.56.047-.747.327-.747.933zm14.337.745c.093.42 0 .84-.42.888l-.7.14v10.264c-.608.327-1.168.514-1.635.514-.748 0-.935-.234-1.495-.933l-4.577-7.186v6.952L12.21 19s0 .84-1.168.84l-3.222.186c-.093-.186 0-.653.327-.746l.84-.233V9.854L7.822 9.76c-.094-.42.14-1.026.793-1.073l3.456-.233 4.764 7.279v-6.44l-1.215-.139c-.093-.514.28-.887.747-.933zM1.936 1.035l13.31-.98c1.634-.14 2.055-.047 3.082.7l4.249 2.986c.7.513.934.653.934 1.213v16.378c0 1.026-.373 1.634-1.68 1.726l-15.458.934c-.98.047-1.448-.093-1.962-.747l-3.129-4.06c-.56-.747-.793-1.306-.793-1.96V2.667c0-.839.374-1.54 1.447-1.632z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="post-item">
+          <a class="post-title"
+            href="https://app.notion.com/p/JITServer-1cbc8a178f5b80ca8e1ec4e43703f497?source=copy_link" target="_blank"
+            rel="noopener">JITServer, the decoupled JIT compiler</a>
+          <div class="post-meta">
+            <span class="post-date">Mar 2025</span>
+            <a class="post-notion"
+              href="https://app.notion.com/p/JITServer-1cbc8a178f5b80ca8e1ec4e43703f497?source=copy_link"
+              target="_blank" rel="noopener" aria-label="Read on Notion">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M4.459 4.208c.746.606 1.026.56 2.428.466l13.215-.793c.28 0 .047-.28-.046-.326L17.86 1.968c-.42-.326-.981-.7-2.055-.607L3.01 2.295c-.466.046-.56.28-.374.466zm.793 3.08v13.904c0 .747.373 1.027 1.214.98l14.523-.84c.841-.046.935-.56.935-1.167V6.354c0-.606-.233-.933-.748-.887l-15.177.887c-.56.047-.747.327-.747.933zm14.337.745c.093.42 0 .84-.42.888l-.7.14v10.264c-.608.327-1.168.514-1.635.514-.748 0-.935-.234-1.495-.933l-4.577-7.186v6.952L12.21 19s0 .84-1.168.84l-3.222.186c-.093-.186 0-.653.327-.746l.84-.233V9.854L7.822 9.76c-.094-.42.14-1.026.793-1.073l3.456-.233 4.764 7.279v-6.44l-1.215-.139c-.093-.514.28-.887.747-.933zM1.936 1.035l13.31-.98c1.634-.14 2.055-.047 3.082.7l4.249 2.986c.7.513.934.653.934 1.213v16.378c0 1.026-.373 1.634-1.68 1.726l-15.458.934c-.98.047-1.448-.093-1.962-.747l-3.129-4.06c-.56-.747-.793-1.306-.793-1.96V2.667c0-.839.374-1.54 1.447-1.632z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="post-item">
+          <a class="post-title"
+            href="https://app.notion.com/p/getting-started-1edc8a178f5b809a8a84e7ba6c9ec9aa?source=copy_link"
+            target="_blank" rel="noopener">Getting Started with SOOT, a static analysis framework</a>
+          <div class="post-meta">
+            <span class="post-date">Jan 2025</span>
+            <a class="post-notion"
+              href="https://app.notion.com/p/getting-started-1edc8a178f5b809a8a84e7ba6c9ec9aa?source=copy_link"
+              target="_blank" rel="noopener" aria-label="Read on Notion">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M4.459 4.208c.746.606 1.026.56 2.428.466l13.215-.793c.28 0 .047-.28-.046-.326L17.86 1.968c-.42-.326-.981-.7-2.055-.607L3.01 2.295c-.466.046-.56.28-.374.466zm.793 3.08v13.904c0 .747.373 1.027 1.214.98l14.523-.84c.841-.046.935-.56.935-1.167V6.354c0-.606-.233-.933-.748-.887l-15.177.887c-.56.047-.747.327-.747.933zm14.337.745c.093.42 0 .84-.42.888l-.7.14v10.264c-.608.327-1.168.514-1.635.514-.748 0-.935-.234-1.495-.933l-4.577-7.186v6.952L12.21 19s0 .84-1.168.84l-3.222.186c-.093-.186 0-.653.327-.746l.84-.233V9.854L7.822 9.76c-.094-.42.14-1.026.793-1.073l3.456-.233 4.764 7.279v-6.44l-1.215-.139c-.093-.514.28-.887.747-.933zM1.936 1.035l13.31-.98c1.634-.14 2.055-.047 3.082.7l4.249 2.986c.7.513.934.653.934 1.213v16.378c0 1.026-.373 1.634-1.68 1.726l-15.458.934c-.98.047-1.448-.093-1.962-.747l-3.129-4.06c-.56-.747-.793-1.306-.793-1.96V2.667c0-.839.374-1.54 1.447-1.632z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Events -->
+    <!-- Events -->
+    <section id="events">
+      <p class="section-label">Events</p>
+      <div class="event-list">
+
+        <!-- <div class="event-item">
+      <div class="event-date-col">Oct 2026</div>
+      <div>
+        <div class="event-title">
+          <a href="https://iict-event-website.com" target="_blank" rel="noopener">IICT</a>
+          <span class="event-badge badge-upcoming">upcoming</span>
+        </div>
+        <div class="event-venue">IISc Bengaluru</div>
+      </div>
+    </div> -->
+
+        <div class="event-item">
+          <div class="event-date-col">Sept 2025</div>
+          <div>
+            <div class="event-title">
+              <a href="https://compilertech.org/" target="_blank" rel="noopener">IICT</a>
+              <span class="event-badge badge-past">past</span>
+              <span class="event-role">poster presenter</span>
+            </div>
+            <div class="event-venue">
+              IISc Bengaluru
+              <a class="poster-link" href="assets/posters/iict-2025-poster.pdf" target="_blank" rel="noopener">↗
+                poster</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="event-item">
+          <div class="event-date-col">Mar 2025</div>
+          <div>
+            <div class="event-title">
+              <a href="https://www.cse.iitb.ac.in/~plato/PLACID/index.html" target="_blank" rel="noopener">PLACID</a>
+              <span class="event-badge badge-past">past</span>
+              <span class="event-role">attendee · volunteer</span>
+            </div>
+            <div class="event-venue">IIT Bombay</div>
+          </div>
+        </div>
+
+        <div class="event-item">
+          <div class="event-date-col">Sept 2024</div>
+          <div>
+            <div class="event-title">
+              <a href="https://compilertech.org/" target="_blank" rel="noopener">IICT</a>
+              <span class="event-badge badge-past">past</span>
+              <span class="event-role">attendee</span>
+            </div>
+            <div class="event-venue">Bengaluru, India</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <!-- <span class="footer-text">Your Name · [University]</span> -->
+        <span class="footer-text">last updated jun 2025</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="theme.js"></script>
+  <script>lucide.createIcons();</script>
+</body>
+
+</html>
